@@ -14,23 +14,27 @@ public class NewBehaviourScript : MonoBehaviour
         string playerName = "나검사";
         bool isFullLevel = false;
 
-        Debug.Log("용사의 이름은?");
-        Debug.Log(playerName);
-        Debug.Log("용사의 레벨은?");
-        Debug.Log(level);
-        Debug.Log("용사의 힘은?");
-        Debug.Log(strength);
-        Debug.Log("용사는 만렙인가?");
-        Debug.Log(isFullLevel);
+        Debug.Log("용사의 이름은 :" + playerName);
+        // Debug.Log(playerName);
+        Debug.Log("용사의 레벨은 :" + level);
+        // Debug.Log(level);
+        Debug.Log("용사의 힘은 :" + strength);
+        // Debug.Log(strength);
+        Debug.Log("용사는 만렙인가 :" + isFullLevel);
+        // Debug.Log(isFullLevel);
 
         //그룹형 변수
         string[] monsters = { "슬라임", "사막뱀", "악마" };
         
         Debug.Log("맵에 존재하는 몬스터");
+        for (int i = 0; i < 3; i++) {
+            Debug.Log(monsters[i]);
+        }
+/*
         Debug.Log(monsters[0]);
         Debug.Log(monsters[1]);
         Debug.Log(monsters[2]);
-
+*/
         List<string> items = new List<string>();
         items.Add("생명물약30");
         items.Add("마나물약30");
