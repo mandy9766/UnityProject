@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    int health = 30;
     void Start()
     {
         Debug.Log("Hello Unity!");
@@ -51,16 +52,34 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log("용사는 만렙입니까?" + isFullLevel);
 
         //상황연산자
-        int health = 30;
+
         int mana = 25;
 
         bool isBadCondition = (health <= 50 || mana <= 20);
         string condition = isBadCondition ? "나쁨" : "좋음";
         Debug.Log("용사의 컨디션은 나쁩니까?" + " " + condition);
 
-        //키워드
+        //함수사용
 
+        Heal();
 
+        // 클래스
+        Player player = new Player();
+        player.id = 1;
+        player.name = "나법사";
+        player.weapon = "나무지팡이";
+        Debug.Log(player.Talk());
+        Debug.Log(player.HasWeapon());
+        player.LevelUp();
+        Debug.Log(player.name + "의 레벨은 " + player.level);
+        Debug.Log(player.move());
     }
-    
+    //7 함수 
+    void Heal()
+    {
+        health += 10;
+        Debug.Log("힐을 받았습니다. " + health);
+    }
+
+
 }
