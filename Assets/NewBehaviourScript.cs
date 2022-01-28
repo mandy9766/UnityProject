@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,57 +8,57 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Debug.Log("Hello Unity!");
 
-        //º¯¼ö
+        //ë³€ìˆ˜
         int level = 5;
         float strength = 15.5f;
-        string playerName = "³ª°Ë»ç";
+        string playerName = "ë‚˜ê²€ì‚¬";
         bool isFullLevel = false;
 
-        Debug.Log("¿ë»çÀÇ ÀÌ¸§Àº?");
+        Debug.Log("ìš©ì‚¬ì˜ ì´ë¦„ì€?");
         Debug.Log(playerName);
-        Debug.Log("¿ë»çÀÇ ·¹º§Àº?");
+        Debug.Log("ìš©ì‚¬ì˜ ë ˆë²¨ì€?");
         Debug.Log(level);
-        Debug.Log("¿ë»çÀÇ ÈûÀº?");
+        Debug.Log("ìš©ì‚¬ì˜ í˜ì€?");
         Debug.Log(strength);
-        Debug.Log("¿ë»ç´Â ¸¸·¾ÀÎ°¡?");
+        Debug.Log("ìš©ì‚¬ëŠ” ë§Œë ™ì¸ê°€?");
         Debug.Log(isFullLevel);
 
-        //±×·ìÇü º¯¼ö
-        string[] monsters = { "½½¶óÀÓ", "»ç¸·¹ì", "¾Ç¸¶" };
+        //ê·¸ë£¹í˜• ë³€ìˆ˜
+        string[] monsters = { "ìŠ¬ë¼ì„", "ì‚¬ë§‰ë±€", "ì•…ë§ˆ" };
         
-        Debug.Log("¸Ê¿¡ Á¸ÀçÇÏ´Â ¸ó½ºÅÍ");
+        Debug.Log("ë§µì— ì¡´ì¬í•˜ëŠ” ëª¬ìŠ¤í„°");
         Debug.Log(monsters[0]);
         Debug.Log(monsters[1]);
         Debug.Log(monsters[2]);
 
         List<string> items = new List<string>();
-        items.Add("»ı¸í¹°¾à30");
-        items.Add("¸¶³ª¹°¾à30");
+        items.Add("ìƒëª…ë¬¼ì•½30");
+        items.Add("ë§ˆë‚˜ë¬¼ì•½30");
 
-        Debug.Log("°¡Áö°í ÀÖ´Â ¾ÆÀÌÅÛ");
+        Debug.Log("ê°€ì§€ê³  ìˆëŠ” ì•„ì´í…œ");
         Debug.Log(items[0]);
         Debug.Log(items[1]);
 
         
+        
+        //ì—°ì‚°ì
 
-        //¿¬»êÀÚ
-
-        string title = "Àü¼³ÀÇ";
+        string title = "ì „ì„¤ì˜";
         Debug.Log(title + " " + playerName);
 
         int fullLevel = 99;
         isFullLevel = (level == fullLevel);
-        Debug.Log("¿ë»ç´Â ¸¸·¾ÀÔ´Ï±î?" + isFullLevel);
+        Debug.Log("ìš©ì‚¬ëŠ” ë§Œë ™ì…ë‹ˆê¹Œ?" + isFullLevel);
 
-        //»óÈ²¿¬»êÀÚ
+        //ìƒí™©ì—°ì‚°ì
         int health = 30;
         int mana = 25;
 
         bool isBadCondition = (health <= 50 || mana <= 20);
-        string condition = isBadCondition ? "³ª»İ" : "ÁÁÀ½";
-        Debug.Log("¿ë»çÀÇ ÄÁµğ¼ÇÀº ³ª»Ş´Ï±î?" + " " + condition);
+        string condition = isBadCondition ? "ë‚˜ì¨" : "ì¢‹ìŒ";
+        Debug.Log("ìš©ì‚¬ì˜ ì»¨ë””ì…˜ì€ ë‚˜ì©ë‹ˆê¹Œ?" + " " + condition);
 
-        //Å°¿öµå
+        //í‚¤ì›Œë“œ
 
 
     }
