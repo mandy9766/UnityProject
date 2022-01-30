@@ -5,7 +5,7 @@ using UnityEngine;
 public class LifeCycle : MonoBehaviour
 {
 
-    //초기화 영역
+   /* //초기화 영역
     void Awake()
     {
         Debug.Log("플레이어 데이터가 준비 되었습니다.");  
@@ -49,5 +49,21 @@ public class LifeCycle : MonoBehaviour
     {
         Debug.Log("플레이어 데이터가 해제 되었습니다.");
     }
+   */
 
+    void Update()
+    {
+        if (Input.anyKeyDown)
+            Debug.Log("플레이어가 아무 키를 눌렀습니다");
+        if(Input.anyKey)
+            Debug.Log("플레이어가 아무 키를 누르고 있습니다");
+        if (Input.GetKeyDown(KeyCode.Return))
+            Debug.Log("아이템을 구입하였습니다");
+        if (Input.GetKey(KeyCode.LeftArrow))
+            Debug.Log("왼쪽으로 이동 중");
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+            Debug.Log("오른쪽으로 이동을 멈췄습니다.");
+
+
+    }
 }
