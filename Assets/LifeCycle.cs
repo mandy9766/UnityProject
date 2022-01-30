@@ -93,12 +93,17 @@ public class LifeCycle : MonoBehaviour
             Debug.Log("횡이동중...." + Input.GetAxisRaw("Horizontal"));
         }
 
-
+        
         // 캐릭터 이동
 
-        Vector3 vecH = new Vector3(Input.GetAxis("Horizontal")*0.01f,0, Input.GetAxis("Vertical") * 0.01f);
+        // Time.deltaTime -> 이전 프레임을 돌리는데 걸리는 시간 ( 컴퓨터마다 다르니까 이걸 써줘야 이걸 맞춰줘야함)
+        // translate  : 벡터에 곱하기 -> transform.Translate(Vec*Time.deltaTime);
+        // OR
+        // 벡터함수 : 시간매개변수에 곱하기 -> Vector3.Lerp(Vec1,Vec2,T*Time.deltaTime);
+
+        Vector3 vec = new Vector3(Input.GetAxis("Horizontal")*1f,0, Input.GetAxis("Vertical") * 1f);
         
-        transform.Translate(vecH);
+        transform.Translate(vec*Time.deltaTime);
 
 
     }
